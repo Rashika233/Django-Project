@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    
+    <title>We are here!!!</title>
+</head>
+<body>
+    <h1> Hello  {{name}} </h1>
+    <link rel = "stylesheet" type = 'text/css'
+        href = '{% static "prac_app/style.css" %}'>
+   <p>This is the custom template</p> 
+   <img src="{% static 'prac_app/image/WELCOME TO CONSULTADD_2021.png' %}" alt="WELCOME TO CONSULTADD_2021.png">
+    <form action = "" method = "post"> 
+    {% csrf_token %} 
+    {{form.as_p }} 
+    <input type="submit" value="Submit"> 
+</form> 
+</body>
+</html>
